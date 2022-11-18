@@ -3,19 +3,20 @@ package main
 import (
 	"bufio"
 	"flag"
-	"github.com/zqijzqj/mtSecKill/global"
-	"github.com/zqijzqj/mtSecKill/logs"
-	"github.com/zqijzqj/mtSecKill/secKill"
 	"os"
 	"strings"
 	"time"
+
+	"github.com/zqijzqj/mtSecKill/global"
+	"github.com/zqijzqj/mtSecKill/logs"
+	"github.com/zqijzqj/mtSecKill/secKill"
 )
 
 var skuId = flag.String("sku", "100012043978", "茅台商品ID")
 var num = flag.Int("num", 2, "商品数量")
 var works = flag.Int("works", 5, "并发数")
 var start = flag.String("time", "09:59:59.500", "开始时间---不带日期")
-var brwoserPath = flag.String("execPath", "", "浏览器执行路径，路径不能有空格")
+var brwoserPath = flag.String("execPath", "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome", "浏览器执行路径，路径不能有空格")
 var eid = flag.String("eid", "", "如果不传入，可自动获取，对于无法获取的用户可手动传入参数")
 var fp = flag.String("fp", "", "如果不传入，可自动获取，对于无法获取的用户可手动传入参数")
 var payPwd = flag.String("payPwd", "", "支付密码 可不填")
